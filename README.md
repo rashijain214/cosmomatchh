@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
 
-## Project info
+# CosmoMatch - Cosplay Creator × Brand Matchmaking Platform
 
-**URL**: https://lovable.dev/projects/d62266d9-bac0-4599-ab81-34007eecef7b
+A React.js prototype for connecting cosplay creators with brands for collaboration opportunities.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **User Authentication**: Simple login/register system with localStorage persistence
+- **Protected Routes**: Access control based on authentication status  
+- **Creator Dashboard**: Personalized welcome page with quick stats
+- **Gigs Marketplace**: Browse collaboration opportunities with brands
+- **Profile Management**: Editable profile with skills, social links, and bio
+- **Reels Section**: Placeholder for future video showcase feature
+- **Responsive Design**: Clean, calming UI with white, lavender, and soft green colors
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d62266d9-bac0-4599-ab81-34007eecef7b) and start prompting.
+- React 18+ with functional components and hooks
+- React Router DOM for navigation
+- React Context API for state management
+- Vanilla CSS (no external UI libraries)
+- localStorage for data persistence
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
+```
+src/
+├── App.jsx                 # Main app component with routing
+├── App.css                 # Global styles and component styling
+├── components/
+│   └── Navbar.jsx          # Navigation component
+├── pages/
+│   ├── Landing.jsx         # Public home page
+│   ├── Login.jsx           # User login form
+│   ├── Register.jsx        # User registration form
+│   ├── Dashboard.jsx       # Creator dashboard (protected)
+│   ├── Gigs.jsx           # Browse gigs (protected)
+│   ├── Reels.jsx          # Coming soon placeholder (protected)
+│   └── Profile.jsx        # Edit profile (protected)
+└── context/
+    └── AuthContext.js      # Authentication context and logic
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd cosmo-match
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Authentication
 
-**Use GitHub Codespaces**
+The app uses a simple fake authentication system for demonstration purposes:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Registration**: Any email/password combination will work
+- **Login**: Use any email/password that was "registered"
+- **Session**: Login state persists in localStorage
+- **Protection**: Authenticated routes redirect to login if not signed in
 
-## What technologies are used for this project?
+## Available Scripts
 
-This project is built with:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Features Overview
 
-## How can I deploy this project?
+### Landing Page
+- Hero section introducing CosmoMatch
+- Feature cards explaining the platform
+- Call-to-action buttons for registration/login
 
-Simply open [Lovable](https://lovable.dev/projects/d62266d9-bac0-4599-ab81-34007eecef7b) and click on Share -> Publish.
+### Dashboard
+- Personalized welcome message
+- Quick navigation to main features
+- Basic user statistics
+- Quick action cards
 
-## Can I connect a custom domain to my Lovable project?
+### Gigs Section
+- Grid of collaboration opportunities
+- Dummy data showing various brand partnerships
+- Apply buttons (functionality to be implemented)
 
-Yes, you can!
+### Profile Management
+- Editable personal information
+- Skills and experience level
+- Social media links
+- Bio and location fields
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Responsive Design
+- Mobile-first approach
+- Tablet and desktop optimizations
+- Clean, calming color scheme
+- Smooth transitions and hover effects
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Future Enhancements
+
+- Real backend integration
+- File upload for profile pictures and portfolios
+- Video upload and management for Reels
+- Real-time messaging between creators and brands
+- Advanced search and filtering
+- Payment integration
+- Rating and review system
+
+## Contributing
+
+This is a prototype application. For production use, consider:
+- Implementing proper authentication with secure backend
+- Adding form validation and error handling
+- Integrating with a real database
+- Adding comprehensive testing
+- Implementing proper SEO optimization
+
+## License
+
+This project is for demonstration purposes.
