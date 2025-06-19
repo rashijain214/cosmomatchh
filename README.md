@@ -1,7 +1,7 @@
 
 # CosmoMatch - Cosplay Creator × Brand Matchmaking Platform
 
-A React.js prototype for connecting cosplay creators with brands for collaboration opportunities.
+A prototype for connecting cosplay creators with brands for collaboration opportunities.
 
 ## Features
 
@@ -122,15 +122,9 @@ The app uses a simple fake authentication system for demonstration purposes:
 - Payment integration
 - Rating and review system
 
-## Contributing
-
 This is a prototype application. For production use, consider:
 - Implementing proper authentication with secure backend
 - Adding form validation and error handling
 - Integrating with a real database
 - Adding comprehensive testing
 - Implementing proper SEO optimization
-
-## License
-
-This project is for demonstration purposes.
